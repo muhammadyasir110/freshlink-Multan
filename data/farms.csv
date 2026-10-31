@@ -1,0 +1,9 @@
+farm_id,name,area,lat,lon,produce,surplus_kg,harvest_day,shelf_life_days,price_pkr_per_kg
+F01,Bosan Road Community Garden,Bosan Road,30.2338,71.4745,Tomato,120,Mon,4,90
+F02,Shujabad Mango & Veg Farm,Shujabad,29.8770,71.2930,Mango,300,Tue,6,180
+F03,Qasim Bela Urban Farm,Qasim Bela,30.1850,71.4380,Spinach,60,Mon,2,60
+F04,Mumtazabad Kitchen Garden,Mumtazabad,30.1840,71.4960,Okra,80,Wed,3,140
+F05,Sher Shah Road Growers,Sher Shah,30.2280,71.4380,Onion,250,Thu,20,85
+F06,Gulgasht Rooftop Farm,Gulgasht,30.2160,71.4700,Cucumber,70,Tue,5,100
+F07,Head Muhammad Wala Fields,Head M. Wala,30.1500,71.5300,Guava,150,Fri,5,120
+F08,Suraj Miani Farmers Group,Suraj Miani,30.2550,71.5050,Potato,400,Sat,30,70

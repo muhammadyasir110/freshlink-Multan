@@ -1,0 +1,5 @@
+.freshlink_state/
+__pycache__/
+.env
+*.pyc
+.streamlit/secrets.toml

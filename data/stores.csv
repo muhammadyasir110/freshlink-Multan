@@ -1,0 +1,7 @@
+store_id,name,area,lat,lon,needs,demand_kg,budget_pkr_per_kg
+S01,Al-Madina Karyana Store,Basti Malook Road,30.1650,71.4550,Tomato;Onion;Potato,60,100
+S02,Bismillah General Store,Double Phatak,30.2010,71.4880,Spinach;Okra;Cucumber,30,150
+S03,Faisal Corner Shop,Chungi No. 9,30.2120,71.4520,Tomato;Cucumber;Guava,40,130
+S04,Hamza Mart,Nawan Shehr,30.1960,71.4710,Mango;Guava;Onion,50,200
+S05,Noor Kiryana,Old Shujabad Road,30.1700,71.4800,Potato;Onion;Okra,80,95
+S06,Sadiq Utility Store,Vehari Chowk,30.2010,71.5200,Tomato;Spinach;Potato,45,100
