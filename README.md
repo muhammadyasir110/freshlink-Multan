@@ -5,7 +5,7 @@ Scenario: Predictive Agricultural Logistics & Hyper-Local Marketplace
 
 ## 🌐 Live demo (no setup, no API key needed)
 
-### 👉 https://REPLACE-WITH-YOUR-LINK.streamlit.app
+### 👉 https://boy8p4t5ek3sd6nmrowaxx.streamlit.app
 
 The Gemini API key is configured on the server backend (Streamlit Cloud Secrets), so judges only need to open the link.
 *(If the app is asleep, click "Yes, get this app back up" and wait about 30 seconds.)*
@@ -18,7 +18,7 @@ The Gemini API key is configured on the server backend (Streamlit Cloud Secrets)
 |---|---|---|
 | 1 | Public GitHub repository with an explicit open-source license | This repo · [`LICENSE`](LICENSE) (MIT) |
 | 2 | Live code demo of the Gemma model using the Gemini API to analyse visual assets or text logs | Live demo → **Tab 1** (photo analysis) and **Tab 3** (text bargaining) · code: [`gemma_agent.py`](gemma_agent.py) |
-| 3 | Onchain validation interactions visible in the codebase or a live terminal demo | Live demo → **Tab 4** · code: [`solana_registry.py`](solana_registry.py) · terminal: `python cli_demo.py` · proof links below |
+| 3 | Onchain validation interactions visible in the codebase or a live terminal demo | Code: [`solana_registry.py`](solana_registry.py) · UI: Live demo → **Tab 4** · terminal: `python cli_demo.py` |
 | 4 | Clear README annotations of the exact prompts used with GitHub Copilot to solve a development blocker | [Section below](#github-copilot-exact-prompts-used) |
 
 ## 🧪 How to test in 2 minutes
@@ -26,7 +26,7 @@ The Gemini API key is configured on the server backend (Streamlit Cloud Secrets)
 2. **Tab 1:** pick a farm and upload any photo of a fruit or vegetable, then click **Grade with Gemma 4**. Gemma 4 checks quality and writes the listing.
 3. **Tab 2:** choose a delivery day to see farm-to-store matches, the map, and the deficit-by-day chart.
 4. **Tab 3:** type an offer as the store owner, e.g. `40 kg chahiye, Rs 80 per kg?`, and the Gemma 4 seller agent bargains back.
-5. **Tab 4:** register a buyer or seller agent on Solana devnet, then record feedback after a deal. A Solana Explorer link appears.
+5. **Tab 4:** register a buyer or seller agent and record feedback after a deal.
 
 ---
 
@@ -62,12 +62,7 @@ def _call_gemma(contents) -> str:
 - `record_feedback()` writes `FRESHLINK|FEEDBACK|<from>|<to>|<stars>|<deal>` onchain.
 - `reputation_scores()` rebuilds the reputation from the feedback records and feeds it into the match score.
 
-**Onchain proof (devnet):**
-| Action | Transaction |
-|---|---|
-| Register seller agent | REPLACE-WITH-EXPLORER-LINK |
-| Register buyer agent | REPLACE-WITH-EXPLORER-LINK |
-| Feedback buyer → seller | REPLACE-WITH-EXPLORER-LINK |
+**Note:** The public devnet faucet blocks airdrops to cloud-hosted servers, so on the hosted demo Tab 4 falls back to a clearly labelled **SIMULATED** hash-chained ledger. With a funded devnet wallet (`SOLANA_PAYER_KEY`), the same code sends real devnet transactions and returns Solana Explorer links. All onchain logic is in [`solana_registry.py`](solana_registry.py).
 
 ### GitHub Copilot Acceleration
 *Brief: spatial map route calculation boilerplate, mock inventory arrays, localized data pipelines.*
@@ -76,10 +71,9 @@ def _call_gemma(contents) -> str:
 - Data pipeline: `matcher.load()` / `match()`
 
 ## GitHub Copilot: exact prompts used
-| # | Development blocker | Exact prompt typed into Copilot | Result in code | Screenshot |
-|---|---|---|---|---|
-| 1 | REPLACE | REPLACE | REPLACE | `docs/copilot-1.png` |
-| 2 | REPLACE | REPLACE | REPLACE | `docs/copilot-2.png` |
+| # | Development blocker | Exact prompt typed into Copilot | Result in code |
+|---|---|---|---|
+| 1 | Distance between farms and stores without a maps API | `write a python haversine function returning km between two lat/lon points` | `haversine_km()` in matcher.py |
 
 ---
 
